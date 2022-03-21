@@ -1,0 +1,29 @@
+﻿@{ 
+    ViewData["Title"] = "ListAllProducts";
+    Layout = "~/Views/Shared/_AzmyLayout.cshtml";
+}
+@model LinkedList<PROG123.Models.ProductModel>
+<h2>ListAllProducts</h2>
+<div class="inputwrap">
+    <label>Product Name: </label>
+    <label>Description: </label>
+    <label>Price: </label>
+    <label>PID: </label>
+    <label>Inventory: </label>
+</div>
+
+@foreach (PROG123.Models.ProductModel productModel in Model)
+{ 
+<div class="inputwrap">
+    <label>@productModel.Name</label>
+    <label style="width:120px;">@productModel.Description</label>
+    <label>@productModel.Price</label>
+    <label>@productModel.PID</label>
+    <label>@productModel.InventoryAmount</label>
+
+    <a href="@Url.Action("OneClickBuy","Azmy" , new {PID=productModel.PID})">Buy</a>
+
+</div>
+
+
+    }

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/css/AzmyCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="~/images/Mario.jpg" class="center" />
+       <br/>
+        <h2 id="headerText">Welcome @ViewBag.UserFirstName</h2>
+    </header>
+   
+    <br />
+    
+    <div id="content">
+        <article>
+            @RenderBody()
+        </article>
+    </div>
+    <br />
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Shopping</li>
+            <li>About</li>
+            <li><a href="@Url.Action("ListAllProducts","Azmy")">Show Products</a></li>
+            <li><a href="@Url.Action("EnterNewProduct","Azmy")">Add Products</a></li>
+            <li><a href="@Url.Action("Index","Home")">SignUp</a></li>
+        </ul>
+    </nav>
+    <br />
+    <footer>
+        &copy; 2021 Mario
+    </footer>
+</body>
+</html>

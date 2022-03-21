@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+@model PROG123.Models.PersonModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditPerson</title>
+
+</head>
+
+<body>
+    <h1>EditPerson.cshtml</h1>
+    
+    <form asp-action="UpdatePerson" method="post">
+        <label>First Name</label> <input asp-for="FName" value="@Model.FName"/>
+        <br />
+        <label>Last Name</label> <input asp-for="LName" value="@Model.LName"/>
+        <br />
+        <label>email</label> <input asp-for="Email" value="@Model.Email"/>
+        <br />
+        <label>Phone</label> <input asp-for="Phone" value="@Model.Phone"/>
+        <br />
+        <label>Address</label> <input asp-for="Address" value="@Model.Address"/>
+        <br />
+        <label>User Name</label> <input asp-for="UserName" value="@Model.UserName"/>
+        <br />
+        <label>Password</label> <input asp-for="Password" value="@Model.Password"/>
+        <br />
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+
+</html>

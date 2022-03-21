@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "AddProductToDB";
+    Layout = "~/Views/Shared/_AzmyLayout.cshtml";
+
+}
+@model PROG123.Models.ProductModel
+
+<!doctype html>
+<html>
+<head>
+    <title>AddProductToDB</title>
+</head>
+
+<body>
+    <h2>AddProductToDB</h2>
+    <br />
+    Name: @Model.Name<br />
+    Description: @Model.Description<br />
+    Price: @Model.Price<br />
+    Inventory: @Model.InventoryAmount<br />
+    PID: @Model.PID<br />
+    <hr />
+    <p><a href="@Url.Action("EnterNewProduct", "Azmy")">Enter Another Product</a></p>
+    
+</body>
+</html>
